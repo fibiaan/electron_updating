@@ -1,0 +1,23 @@
+{
+  "name": "electron_updating",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fibiaan/electron_updating.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fibiaan/electron_updating/issues"
+  },
+  "homepage": "https://github.com/fibiaan/electron_updating#readme",
+  "devDependencies": {
+    "electron": "^19.0.6",
+    "electron-builder": "^23.1.0"
+  }
+}
