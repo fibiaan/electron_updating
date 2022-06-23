@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "electron .",
-    "build:publish": "electron-builder --win --publish always"
+    "build:publish": "set GH_TOKEN=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 && electron-builder --win --publish always"
   },
   "repository": {
     "type": "git",
@@ -17,10 +17,12 @@
     "url": "https://github.com/fibiaan/electron_updating/issues"
   },
   "homepage": "https://github.com/fibiaan/electron_updating#readme",
+  "dependenciex": {
+    "electron-is-dev": "^2.0.0"
+  },
   "devDependencies": {
     "electron": "^19.0.6",
-    "electron-builder": "^23.1.0",
-    "electron-is-dev": "^2.0.0"
+    "electron-builder": "^23.1.0"
   },
   "build": {
     "appId": "com.electron_updating.demo",
