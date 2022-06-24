@@ -11,7 +11,10 @@ const createWindow = () => {
     win.loadFile('index.html')
 
     if(!isDev){
+        console.log('not in dev')
         autoUpdater.checkForUpdates();
+    }else{
+        console.log('in dev')
     }
     
 }
@@ -44,4 +47,16 @@ autoUpdater.on("update-downloaded", (_event, releasesNotes, releaseName) => {
         if(returnValue.response === 0) autoUpdater.quitAndInstall();
     });
 
+})
+
+autoUpdater.on('error', (message) => {
+    const dialogOpts = {
+        type: "info",
+        buttons: [':('],
+        title: "Error",
+        message: "Error",
+        detail: message.message
+    }
+    
+    dialog.showMessageBox(dialogOpts).then((returnValue) => {});
 })
